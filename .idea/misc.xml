@@ -3,18 +3,47 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/drawable/ic_menu_camera.xml" value="0.2265" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2265" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_add_to_cart.xml" value="0.25" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_custom_cartview.xml" value="0.264" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_custom_productview.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_custom_viewpurchase1.xml" value="0.264" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_home_page.xml" value="0.234375" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_login.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_loginpage.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_main2.xml" value="0.2296875" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_nav_bar.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_product_more.xml" value="0.140625" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_profile_view.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_userregistration.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_view_cart.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_view_category.xml" value="0.25" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_view_product.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/activity_view_purchase_history.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/app_bar_aa.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/app_bar_transaction.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/content_aa.xml" value="0.234375" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/content_login.xml" value="0.264" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/content_transaction.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/custom_category_view.xml" value="0.25" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/custom_product.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/fragment_dashboard.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/fragment_first.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/fragment_gallery.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/fragment_home.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/fragment_second.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/fragment_slideshow.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/home_page_activity.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/main_fragment.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/layout/nav_header_transaction.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/menu/aa.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/menu/activity_aa_drawer.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/menu/activity_main_drawer.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/menu/bottom_nav_menu.xml" value="0.234375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/OnlineTransaction/app/src/main/res/menu/t_r_a_n_s_a_c_t_i_o_n.xml" value="0.12604166666666666" />
       </map>
     </option>
   </component>

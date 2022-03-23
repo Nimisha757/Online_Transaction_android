@@ -25,14 +25,43 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         btn4=(Button) findViewById(R.id.button8);
         btn5=(Button) findViewById(R.id.button9);
         btn1.setOnClickListener(this);
+        btn2.setOnClickListener(this);
+        btn3.setOnClickListener(this);
+        btn4.setOnClickListener(this);
+        btn5.setOnClickListener(this);
+
+
 
 
 
     }
 
+
     @Override
     public void onClick(View view) {
-        Intent i= new Intent(getApplicationContext(),ProfileView.class);
+        if (view == btn1) {
+            Intent i = new Intent(getApplicationContext(), ProfileView.class);
+            startActivity(i);
+        }
+
+
+        else if (view==btn2){
+                     Intent i=new Intent(getApplicationContext(),ViewProduct.class);
+                     startActivity(i);
+        }
+        else if(view==btn3){
+            Intent i=new Intent(getApplicationContext(),ViewCart.class);
+            startActivity(i);
+        }
+        else if(view==btn4){
+            Intent i=new Intent(getApplicationContext(),ViewPurchaseHistory.class);
+            startActivity(i);
+        }
+        else if(view==btn5){
+            Intent i=new Intent(getApplicationContext(),loginpage.class);
+            startActivity(i);
+        }
+
 
     }
 }

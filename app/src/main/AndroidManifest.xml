@@ -17,7 +17,18 @@
         android:theme="@style/Theme.OnlineTransaction"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".custom_productview"
+            android:name=".View_category"
+            android:exported="false" />
+        <activity
+            android:name=".add_to_cart"
+            android:exported="false" />
+        <activity
+            android:name=".TRANSACTION"
+            android:exported="false"
+            android:label="@string/title_activity_transaction"
+            android:theme="@style/Theme.OnlineTransaction.NoActionBar" />
+        <activity
+            android:name=".Home_page"
             android:exported="false" />
 
         <uses-library

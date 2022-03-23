@@ -53,9 +53,9 @@ public class Userregistration extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userregistration);
         edp1 = (EditText) findViewById(R.id.editTextTextPersonName3);
-        edp2 = (EditText) findViewById(R.id.editTextTextPersonName6);
+        edp2 = (EditText) findViewById(R.id.editTextTextPersonName3);
         edp3 = (EditText) findViewById(R.id.editTextTextPersonName7);
-        edp4 = (EditText) findViewById(R.id.editTextTextPersonName8);
+        edp4 = (EditText) findViewById(R.id.editTextTextPersonName7);
         edp5 = (EditText) findViewById(R.id.editTextTextPersonName10);
         edp7 = (EditText) findViewById(R.id.editTextTextPersonName12);
         edp6 = (EditText) findViewById(R.id.editTextTextPersonName4);
@@ -68,7 +68,7 @@ public class Userregistration extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         if (view == imv) {
-
+showfilechooser(1);
 
         } else {
             final String name = edp1.getText().toString();
@@ -149,7 +149,7 @@ public class Userregistration extends AppCompatActivity implements View.OnClickL
                         params = new HashMap<String, String>();
 
 
-                        params.put("uname", name);
+                        params.put("name", name);
                         params.put("place", place);
                         params.put("pin", pin);
                         params.put("post", post);

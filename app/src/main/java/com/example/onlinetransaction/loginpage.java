@@ -40,88 +40,99 @@ public class loginpage extends AppCompatActivity implements View.OnClickListener
         btn = (Button) findViewById(R.id.button4);
         tx = (TextView) findViewById(R.id.textView7);
         btn.setOnClickListener(this);
+        tx.setOnClickListener(this);
+
 
     }
 
     @Override
     public void onClick(View view) {
-        final String username = ed1.getText().toString();
-        final String password = ed2.getText().toString();
-        if (username.length() == 0) {
-            ed1.setError("Field cannot be empty!");
-        } else if (password.length() == 0) {
+        if(view==tx){
+            Intent i=new Intent(getApplicationContext(),Userregistration.class);
+            startActivity(i);
 
-            ed2.setError("Field cannot be empty!");
+        }
+        else if(view==btn) {
+            final String username = ed1.getText().toString();
+            final String password = ed2.getText().toString();
+            if (username.length() == 0) {
+                ed1.setError("Field cannot be empty!");
+            } else if (password.length() == 0) {
 
-        } else {
+                ed2.setError("Field cannot be empty!");
 
-            SharedPreferences sh= PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            } else {
 
-            String hu = sh.getString("ip", "");
-            String url = "http://" + hu + ":5000/and_login_post";
-            RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-            StringRequest postRequest = new StringRequest(Request.Method.POST, url,
-                    new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            //  Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "--------else", Toast.LENGTH_SHORT).show();
 
-                            // response
-                            try {
-                                JSONObject jsonObj = new JSONObject(response);
-                                if (jsonObj.getString("status").equalsIgnoreCase("ok")) {
-                                    String lid=jsonObj.getString("lid");
-                                    SharedPreferences sh= PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                                    SharedPreferences.Editor ed= sh.edit();;
-                                    ed.putString("lid",lid);
-                                    ed.commit();
+                SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-                                    Intent i=new Intent(getApplicationContext(),Home.class);
-                                    startActivity(i);
-                                                                 }
+                String hu = sh.getString("ip", "");
+                String url = "http://" + hu + ":5000/and_login_post";
 
+                Toast.makeText(this, "url====" + url, Toast.LENGTH_SHORT).show();
+                RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+                StringRequest postRequest = new StringRequest(Request.Method.POST, url,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                //  Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
 
-                                // }
-                                else {
-                                    Toast.makeText(getApplicationContext(), "Not found", Toast.LENGTH_LONG).show();
+                                // response
+                                try {
+                                    JSONObject jsonObj = new JSONObject(response);
+                                    if (jsonObj.getString("status").equalsIgnoreCase("ok")) {
+                                        String lid = jsonObj.getString("lid");
+                                        SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                                        SharedPreferences.Editor ed = sh.edit();
+                                        ;
+                                        ed.putString("lid", lid);
+                                        ed.commit();
+
+                                        Intent i = new Intent(getApplicationContext(), TRANSACTION.class);
+                                        startActivity(i);
+
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "Not found", Toast.LENGTH_LONG).show();
+                                    }
+
+                                } catch (Exception e) {
+                                    Toast.makeText(getApplicationContext(), "Error" + e.getMessage().toString(), Toast.LENGTH_SHORT).show();
                                 }
-
-                            }    catch (Exception e) {
-                                Toast.makeText(getApplicationContext(), "Error" + e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                // error
+                                Toast.makeText(getApplicationContext(), "eeeee" + error.toString(), Toast.LENGTH_SHORT).show();
                             }
                         }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            // error
-                            Toast.makeText(getApplicationContext(), "eeeee" + error.toString(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-            ) {
-                @Override
-                protected Map<String, String> getParams() {
-                    SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                    Map<String, String> params;
-                    params = new HashMap<String, String>();
+                ) {
+                    @Override
+                    protected Map<String, String> getParams() {
+                        SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                        Map<String, String> params;
+                        params = new HashMap<String, String>();
 
 
-                    params.put("uname",username);
+                        params.put("uname", username);
 
-                    params.put("psw",password);
+                        params.put("psw", password);
 //                params.put("mac",maclis);
 
-                    return params;
-                }
-            };
+                        return params;
+                    }
+                };
 
-            int MY_SOCKET_TIMEOUT_MS=100000;
+                int MY_SOCKET_TIMEOUT_MS = 100000;
 
-            postRequest.setRetryPolicy(new DefaultRetryPolicy(
-                    MY_SOCKET_TIMEOUT_MS,
-                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            requestQueue.add(postRequest);
+                postRequest.setRetryPolicy(new DefaultRetryPolicy(
+                        MY_SOCKET_TIMEOUT_MS,
+                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                requestQueue.add(postRequest);
+            }
         }
 
     }

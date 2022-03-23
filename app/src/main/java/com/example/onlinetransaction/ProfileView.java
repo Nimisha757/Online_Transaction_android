@@ -17,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
 
@@ -48,6 +49,8 @@ public class ProfileView extends AppCompatActivity {
 
         String hu = sh.getString("ip", "");
         String url = "http://" + hu + ":5000/and_profileview";
+
+
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -65,6 +68,7 @@ public class ProfileView extends AppCompatActivity {
                                 String post=jsonObj.getString("post");
                                 String phoneNo=jsonObj.getString("phoneNo");
                                 String email=jsonObj.getString("email");
+                                String image=jsonObj.getString("image");
 
                                 tv1.setText(name);
                                 tv2.setText(place);
@@ -76,6 +80,8 @@ public class ProfileView extends AppCompatActivity {
 
 
 
+                                String url = "http://" + hu + ":5000"+image;
+                                Picasso.with(getApplicationContext()).load(url).into(im);
 
 
                             }
@@ -104,6 +110,8 @@ public class ProfileView extends AppCompatActivity {
                 SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 Map<String, String> params;
                 params = new HashMap<String, String>();
+
+
 
 
 
